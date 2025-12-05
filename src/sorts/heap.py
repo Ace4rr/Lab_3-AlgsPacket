@@ -1,11 +1,22 @@
 from logger import logger
 
 def heap_sort(arr):
+    """
+        Сортировка кучей
+
+        Args:
+            arr
+
+        Returns:
+            arr
+        """
     logger.debug(f"heap_sort input: {arr}")
     def heapy(a,n,i):
+        """Функция "просеивания вних" по дереву чисел
+        """
         largest=i
-        l=2 * i + 1
-        r=2 * i + 2
+        l=2*i+1
+        r=2*i+2
         if l<n and a[l]>a[largest]:
             largest=l
         if r<n and a[r]>a[largest]:

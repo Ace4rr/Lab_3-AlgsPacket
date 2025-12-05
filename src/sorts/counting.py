@@ -1,6 +1,15 @@
 from logger import logger
 
 def counting_sort(arr):
+    """
+        Сортировка подсчетом
+
+        Args:
+            arr
+
+        Returns:
+            arr
+        """
     logger.debug(f"counting_sort input: {arr}")
     if not arr:
         return []

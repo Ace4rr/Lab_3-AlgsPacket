@@ -1,6 +1,15 @@
 from logger import logger
 
 def radix_sort(arr, base=10):
+    """
+        Поразрядная сортировка
+
+        Args:
+            arr
+
+        Returns:
+            arr
+        """
     logger.debug(f"radix_sort input:{arr}")
     if not arr:
         return arr

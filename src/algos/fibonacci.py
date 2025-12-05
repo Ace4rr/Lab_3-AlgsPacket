@@ -1,4 +1,13 @@
 def fibo(n: int) -> int:
+    """
+        Число фибоначи
+
+        Args:
+            int
+
+        Returns:
+            int
+        """
     if n<0:
         raise ValueError("Negative n")
     a,b=0,1
@@ -8,6 +17,15 @@ def fibo(n: int) -> int:
 
 
 def fibo_recursive(n: int) -> int:
+    """
+        Число фибоначи(через рекурсию)
+
+        Args:
+            int
+
+        Returns:
+            int
+        """
     if n<0:
         raise ValueError("Negative n")
     if n<=1:

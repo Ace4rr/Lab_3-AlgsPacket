@@ -1,6 +1,15 @@
 from logger import logger
 
 def quick_sort(arr):
+    """
+        Быстрая сортировка
+
+        Args:
+            arr
+
+        Returns:
+            arr
+        """
     logger.debug(f"quick_sort input: {arr}")
     if len(arr)<=1:
         return arr

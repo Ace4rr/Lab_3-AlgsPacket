@@ -1,6 +1,15 @@
 from logger import logger
 
 def bubble_sort(arr):
+    """
+        Сортировка пузырьком
+
+        Args:
+            args: [arr]
+
+        Returns:
+            [arr]
+        """
     logger.debug(f"bubble_sort input: {arr}")
     n = len(arr)
     for i in range(n):
