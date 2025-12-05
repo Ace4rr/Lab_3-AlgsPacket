@@ -21,7 +21,11 @@ LOGGING_CONFIG = {
             "class": "logging.handlers.RotatingFileHandler",
             "formatter": "standard",
             "mode": "a",
-            "filename": "src/data/shell.log",
+            "filename": __import__("os").path.join(
+                __import__("os").path.dirname(__file__),
+                "data",
+                "shell.log"
+            ),
             "maxBytes": 5 * 1024 * 1024,
             "backupCount": 5,
             "level": "DEBUG",
