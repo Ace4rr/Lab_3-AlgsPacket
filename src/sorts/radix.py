@@ -16,7 +16,7 @@ def radix_sort(arr, base=10):
     max_val=max(arr)
     expas=1
     a=arr[:]
-    while max_val//exp>0:
+    while max_val//expas>0:
         output=[0]*len(a)
         count=[0]*base
         for i in a:
