@@ -10,11 +10,10 @@ def main():
         except (EOFError, KeyboardInterrupt):
             print()
             break
-
-        if  raw.lower() in ("exit","quit"):
-            break
         if not raw:
             continue 
+        if  raw.lower() in ("exit","quit"):
+            break
         try:
             argv=shlex.split(raw)
             args=parser.parse_args(argv)
@@ -25,14 +24,15 @@ def main():
             logger.warning(f"Parse error: {e}")
             print(f"Parse error: {e}")
             continue
-        if not hasattr(args,"handler"):
+        if not hasattr(args,"func"):
             print("Unknown command")
             continue
         try:
-            result=args.handler(args.n)
-            print(result)
+            result=args.func(args)
+            if result is not None:
+                print(result)
         except Exception as e:
+            logger.warning(f"Command failed: {e}")
             print(f"Error: {e}")
-            logger.warning(f"Command failed{e}")
 if __name__=="__main__":
     main()
