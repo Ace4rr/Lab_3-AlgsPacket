@@ -32,4 +32,3 @@ def heap_sort(arr):
         heapy(arr,i,0)
     logger.debug(f"heap_sort output: {arr}")
     return arr
-#пофиксить вставку/удаление коллекций(лишняя операция по слитию в другие штуки), поправаит quick sort, написать в ридми как работает heap sort, посомтреть сортировку куара
