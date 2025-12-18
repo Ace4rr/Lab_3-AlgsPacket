@@ -3,10 +3,10 @@ import argparse
 from algos.factorial import factorial, factorial_recursive
 from algos.fibonacci import fibo, fibo_recursive
 from sorts import run_sort
-from structs.stack_list import StackList
+from structs.stack_queue import StackQueue
 from structs.queue_list import QueueList
 
-_stack_instance: StackList|None=None
+_stack_instance: StackQueue|None=None
 _queue_instance: QueueList|None=None
 
 def _handle_fact(ns):
@@ -22,7 +22,7 @@ def _handle_sort(ns):
 def _handle_stack(ns):
     global _stack_instance
     if _stack_instance is None:
-        _stack_instance=StackList()
+        _stack_instance=StackQueue()
     action=ns.action
     if action=="push":
         if ns.value is None:

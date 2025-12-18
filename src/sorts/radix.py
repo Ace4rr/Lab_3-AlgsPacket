@@ -10,6 +10,7 @@ def radix_sort(arr, base=10):
         Returns:
             arr
         """
+    arr=[int(x) for x in arr]
     logger.debug(f"radix_sort input:{arr}")
     if not arr:
         return arr

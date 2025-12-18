@@ -13,6 +13,7 @@ def counting_sort(arr):
     logger.debug(f"counting_sort input: {arr}")
     if not arr:
         return []
+    arr=[int(x) for x in arr]
     min_val, max_val=min(arr), max(arr)
     count = [0]*(max_val-min_val+1)
     for num in arr:
